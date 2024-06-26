@@ -16,16 +16,16 @@ public class Administration {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    /*1*/private Long id;
-    /*2*/private String name;
-    /*3*/private String lastName;
-    /*4*/private String secondLastName;
-    /*5*/private String position;
-    /*6*/private String email;
-    /*7*/private String province;
-    /*8*/private String city;
-    /*9*/private String district;
-    /*10*/private String school; /*Referencia a Centro educativo*/
-    /*11*/private String code;
-    /*12*/private String telephoneNumber;
+    private Long id;
+    private String name;
+    private String lastName;
+    private String secondLastName;
+    private String position;
+    private String email;
+    private String province;
+    private String city;
+    private String district;
+    private String school; /*Referencia a Centro educativo*/
+    private String code;
+    private String telephoneNumber;
 }

@@ -64,13 +64,53 @@ public class TeachersController {
 
     @PostMapping({"/addTeachers"})
     public Teachers addTeachers(@RequestBody Teachers teachers){
-        /*AGREGAR CONDICIONES*/
+        if(teachers.getTeacherName() == null || teachers.getTeacherName().isEmpty()){
+            throw new RuntimeException("Debe ingresar un nombre");
+        }
+        if(teachers.getTeacherLastName() == null || teachers.getTeacherLastName().isEmpty()){
+            throw new RuntimeException("Debe ingresar un apellido");
+        }
+        if(teachers.getTeacherSecondLastName() == null || teachers.getTeacherSecondLastName().isEmpty()){
+            throw new RuntimeException("Debe ingresar segundo un apellido");
+        }
+        if(teachers.getTeacherEmail() == null || teachers.getTeacherEmail().isEmpty()){
+            throw new RuntimeException("Debe ingresar un email");
+        }
+        if(teachers.getTeacherJobLicense() == null || teachers.getTeacherJobLicense().isEmpty()){
+            throw new RuntimeException("Debe ingresar un número de gafete");
+        }
+        if(teachers.getTeacherTelephoneNumber() == null || teachers.getTeacherTelephoneNumber().isEmpty()){
+            throw new RuntimeException("Debe ingresar un número de teléfono");
+        }
+        if(teachers.getTeacherSignature() == null || teachers.getTeacherSignature().isEmpty()){
+            throw new RuntimeException("Debe ingresar la asignatura del profesor");
+        }
         return teacherService.addTeacher(teachers);
     }
 
     @PutMapping({"/updateTeachers/{id}"})
     public Teachers updateTeachers(@PathVariable Long id,@RequestBody Teachers teachers){
-        /*AGREGAR CONDICIONALES*/
+        if(teachers.getTeacherName().isEmpty()){
+            throw new RuntimeException("Para actualizar datos debe ingresar un nombre");
+        }
+        if(teachers.getTeacherLastName().isEmpty()){
+            throw new RuntimeException("Para actualizar datos debe ingresar un apellido");
+        }
+        if(teachers.getTeacherSecondLastName().isEmpty()){
+            throw new RuntimeException("Para actualizar datos debe ingresar segundo un apellido");
+        }
+        if(teachers.getTeacherEmail().isEmpty()){
+            throw new RuntimeException("Para actualizar datos debe ingresar un email");
+        }
+        if(teachers.getTeacherJobLicense().isEmpty()){
+            throw new RuntimeException("Para actualizar datos debe ingresar un número de gafete");
+        }
+        if(teachers.getTeacherTelephoneNumber().isEmpty()){
+            throw new RuntimeException("Para actualizar datos debe ingresar un número de teléfono");
+        }
+        if(teachers.getTeacherSignature().isEmpty()){
+            throw new RuntimeException("Para actualizar datos debe ingresar la asignatura del profesor");
+        }
         return teacherService.updateTeacher(id,teachers);
     }
 

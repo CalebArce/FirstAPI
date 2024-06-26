@@ -16,14 +16,14 @@ public class Students {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    /*1*/private Long id;
-    /*2*/private String studentName;
-    /*3*/private String studentLastName;
-    /*4*/private String studentSecondLastName;
-    /*5*/private String studentAge;
-    /*6*/private String studentEmail;
-    /*7*/private String studentGrade;
-    /*8*/private String studentTeacherInCharge;
-    /*9*/private String studentAddress;
-    /*10*/private String studentTelephoneNumber;
+    private Long id;
+    private String studentName;
+    private String studentLastName;
+    private String studentSecondLastName;
+    private String studentAge;
+    private String studentEmail;
+    private String studentGrade;
+    private String studentTeacherInCharge;
+    private String studentAddress;
+    private String studentTelephoneNumber;
 }

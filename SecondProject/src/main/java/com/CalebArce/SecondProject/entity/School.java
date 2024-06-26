@@ -16,14 +16,14 @@ public class School {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    /*1*/private Long id;
-    /*2*/private String schoolName;
-    /*3*/private String schoolProvince;
-    /*4*/private String schoolCity;
-    /*5*/private String schoolDistrict;
-    /*6*/private String schoolEmail;
-    /*7*/private String schoolTelephoneNumber;
-    /*8*/private String schoolCode;
-    /*9*/private int schoolQuantityStudents;
-    /*10*/private int schoolQuantityTeachers;
+    private Long id;
+    private String schoolName;
+    private String schoolProvince;
+    private String schoolCity;
+    private String schoolDistrict;
+    private String schoolEmail;
+    private String schoolTelephoneNumber;
+    private String schoolCode;
+    private int schoolQuantityStudents;
+    private int schoolQuantityTeachers;
 }

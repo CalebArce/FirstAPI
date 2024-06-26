@@ -95,8 +95,34 @@ public class StudentsController {
     }
 
     @PutMapping({"/updateStudents/{id}"})
-    /*AGREGAR CONDICIONALES*/
     public Students updateStudents(@PathVariable Long id,@RequestBody Students students) {
+        if(students.getStudentName().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar un nombre");
+        }
+        if(students.getStudentLastName().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar un apellido");
+        }
+        if(students.getStudentSecondLastName().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar un segundo apellido");
+        }
+        if(students.getStudentAge().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar una edad");
+        }
+        if(students.getStudentEmail().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar un email");
+        }
+        if(students.getStudentGrade().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar un nivel de grado");
+        }
+        if(students.getStudentAddress().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar una dirección");
+        }
+        if(students.getStudentTelephoneNumber().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar un número telefónico");
+        }
+        if(students.getStudentTeacherInCharge().isEmpty()){
+            throw new RuntimeException("Para actualizar debe ingresar un profesor encargado");
+        }
         return studentService.updateStudent(id, students);
     }
 
