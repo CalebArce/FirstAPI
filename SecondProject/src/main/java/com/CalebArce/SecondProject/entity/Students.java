@@ -20,7 +20,7 @@ public class Students {
     private String studentName;
     private String studentLastName;
     private String studentSecondLastName;
-    private String studentAge;
+    private int studentAge;
     private String studentEmail;
     private String studentGrade;
     private String studentTeacherInCharge;
