@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+@Service //crea un objeto el cual puede ser manipulado en varias clases con inyección de dependencias
 public class AdministrationServiceImpl implements AdministrationService {
     @Autowired
     AdministrationRepository administrationRepository;

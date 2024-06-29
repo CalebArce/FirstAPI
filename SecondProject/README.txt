@@ -1,11 +1,7 @@
-SE ESPERA QUE EL USUARIO HAGA UN REGISTRO DE UN CENTRO EDUCATIVO CON LAS VARIABLES INDICADAS DE TIPO STRING PARA UN
-MANEJO MÁS APTO PARA EL TRATO DE LAS EXCEPCIONES Y AUTOMÁTICAMENTE SI TODOS LOS DATOS SON VÁLIDOS INGRESARLOS EN LA
-BASE DE DATOS DE NOMBRE "tlb_students" TAMBIÉN EL USUARIO PUEDE HACER BÚSQUEDAS ESPECÍFICAS DENTRO DEL MISMO
-CONTROLLER PERO CADA UNA TIENE UNA CONDICIÓN DE SI NO EXISTE DICHO VALOR EN LA BASE DE DATOS Y MOSTRAR UN MENSAJE DE
-TIPO RuntimeException QUE SON EXCEPCIONES EN TIEMPO DE EJECUCIÓN Y SON MÁS FÁCILES PARA EL MANEJO DE LAS MISMAS. DONDE
-FINALMENTE EL ENCARGADO DE MANEJAR LA INFORMACIÓN TIENE UNA OPCIÓN PARA ELIMINAR REGISTROS POR MEDIO DEL ID GENERADO
-POR LA BASE DATOS.
-
-it waits the user who has the control of the information makes a register of the schools with the specific data
-of String type. But, if the user inserts something wrong, the program are able to display a runtime exception with the
-specific problem occurs in runtime  If the data what was enter were correct, these data will save in the database
+El programa se basa en un control de acceso de datos de un centro educativo, tratando lo que es un personal
+administrativo, también como un control del mismo centro educativo. Seguidamente, teniendo un control del 
+acceso de estudiantes del mismo centro educativo y el ingreso de los profesores que laboran en el mismo. 
+------------------------------------------------------------------------------------------------------------
+The program's based on a information control of a school, where they can add administrative personal, also 
+have a information control of the same school. They can add a students and teachers, as well. Can have a 
+control of these data and have the possibility to delete and manipulate all data that are able to find it

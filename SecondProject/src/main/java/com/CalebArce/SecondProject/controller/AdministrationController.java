@@ -22,7 +22,7 @@ public class AdministrationController {
         if(administrationService.showAdministration().isEmpty()){//Verifica que exista algún registro en el método existente
             throw new RuntimeException("No hay registro de personal administrativo");//Excepción utilizada en tiempo de ejecución
         }
-        return administrationService.showAdministration();//Devuelve una respuesta a la solicitud por medio del GET MAPPING
+        return administrationService.showAdministration();//Devuelve una respuesta a la solicitud HTTP por medio del GET MAPPING
     }
 
     /*El método get mapping se utiliza solamente para mostrar los datos ingresados a una base de datos u objeto creador e incluso ingresando una variable de referencia*/
@@ -31,7 +31,7 @@ public class AdministrationController {
         if(administrationService.findByName(name).isEmpty()){//Verifica que el nombre del personal no esté vacío
             throw new RuntimeException("El nombre ingresado para el personal administrativo no se encuetra registrado"); //Excepción utilizada en tiempo de ejecución
         }
-        return administrationService.findByName(name);//Devuelve una respuesta a la solicitud por medio del GET MAPPING
+        return administrationService.findByName(name);//Devuelve una respuesta a la solicitud HTTP por medio del GET MAPPING
     }
 
     /*El método get mapping se utiliza solamente para mostrar los datos ingresados a una base de datos u objeto creador e incluso ingresando una variable de referencia*/
@@ -41,7 +41,7 @@ public class AdministrationController {
             throw new RuntimeException("El apellido ingresado para el personal administrativo no se " +
                                         "encuetra registrado"); //Excepción utilizada en tiempo de ejecución
         }
-        return administrationService.findByLastName(lastName);//Devuelve una respuesta a la solicitud por medio del GET MAPPING
+        return administrationService.findByLastName(lastName);//Devuelve una respuesta a la solicitud HTTP por medio del GET MAPPING
     }
 
     /*El método get mapping se utiliza solamente para mostrar los datos ingresados a una base de datos u objeto creador e incluso ingresando una variable de referencia*/
@@ -51,7 +51,7 @@ public class AdministrationController {
             throw new RuntimeException("El segundo apellido ingresado para el personal administrativo " +
                                         "no se encuetra registrado"); //Excepción utilizada en tiempo de ejecución
         }
-        return administrationService.findBySecondLastName(secondLastName);//Devuelve una respuesta a la solicitud por medio del GET MAPPING
+        return administrationService.findBySecondLastName(secondLastName);//Devuelve una respuesta a la solicitud HTTP por medio del GET MAPPING
     }
 
     /*El método get mapping se utiliza solamente para mostrar los datos ingresados a una base de datos u objeto creador e incluso ingresando una variable de referencia*/
@@ -60,7 +60,7 @@ public class AdministrationController {
         if(administrationService.findByCode(code).isEmpty()){ //Verifica si no está vacío el código del personal administrativo
             throw new RuntimeException("El código ingresado para el personal administrativo no se encuentra registrado"); //Excepción utilizada en tiempo de ejecución
         }
-        return administrationService.findByCode(code); //Devuelve una respuesta a la solicitud por medio del GET MAPPING
+        return administrationService.findByCode(code); //Devuelve una respuesta a la solicitud HTTP por medio del GET MAPPING
     }
 
 
@@ -100,7 +100,7 @@ public class AdministrationController {
         if(administration.getTelephoneNumber() == null || administration.getTelephoneNumber().isEmpty()){ //Verifica que el número telefónico no sea nulo ni esté vacío
             throw new RuntimeException("Debe ingresar un número de teléfono");//Excepción utilizada en tiempo de ejecución
         }
-        return administrationService.addPersonal(administration); //Devuelve una respuesta a la solicitud por medio del POST MAPPING
+        return administrationService.addPersonal(administration); //Devuelve una respuesta a la solicitud HTTP por medio del POST MAPPING
     }
 
     /*el método put mapping se utiliza para mapear solicitudes de tipo HTTP a diferencia del Post se utiliza para una actualización de datos ingresando el valor del id generado por la BD*/
@@ -131,7 +131,7 @@ public class AdministrationController {
         if(administration.getTelephoneNumber().isEmpty()){ //Verifica que el número telefónico no esté vacío
             throw new RuntimeException("Para actualizar debe ingresar un número de teléfono");//Excepción utilizada en tiempo de ejecución
         }
-        return administrationService.updateAdministration(id, administration); //Devuelve una respuesta a la solicitud por medio del PUT MAPPING
+        return administrationService.updateAdministration(id, administration); //Devuelve una respuesta a la solicitud HTTP por medio del PUT MAPPING
     }
 
     /*el método delete mapping se utiliza para eliminar registros ingresados en una base de datos dependiendo del valor que se le envie dentro de la ruta*/
